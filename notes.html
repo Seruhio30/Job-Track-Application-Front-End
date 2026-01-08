@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobTrack | Notas</title>
+
+  <!-- ÚNICO CSS GLOBAL -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1 class="title">Notas</h1>
+
+  <div class="header-actions">
+      <button id="backBtn" class="back-btn">Volver</button>
+      <button id="themeToggle" class="theme-btn">🌙</button>
+  </div>
+</header>
+
+<main class="form-container">
+
+  <!-- AÑADIR NOTA -->
+  <h2 class="section-title">Añadir nota</h2>
+
+  <form id="noteForm" class="app-form">
+    <label>
+      <textarea id="noteText" placeholder="Escribe una nota..." required></textarea>
+    </label>
+
+    <button class="add-btn" type="submit">Guardar nota</button>
+  </form>
+
+  <!-- NOTAS EXISTENTES -->
+  <h2 class="section-title" style="margin-top: 2rem;">Notas existentes</h2>
+  <div id="notesList" class="notes-list">Cargando...</div>
+
+</main>
+
+<script src="js/notes.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+</html>

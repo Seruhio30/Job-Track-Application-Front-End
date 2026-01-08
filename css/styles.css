@@ -1,0 +1,315 @@
+/* ==========================================================
+   >>>   SISTEMA DE TEMAS (LIGHT / DARK)
+   ========================================================== */
+
+/* Transiciones generales */
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ----- Modo Claro (Default) ----- */
+body.light-mode {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* ----- Modo Oscuro ----- */
+body.dark-mode {
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+/* ==========================================================
+   >>>   HEADER GLOBAL
+   ========================================================== */
+
+.header,
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0077ff;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header h1,
+.top-bar .title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Botón volver */
+.back-btn {
+    background: transparent;
+    border: 1px solid white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Botón Dark/Light */
+.theme-btn {
+    background: #0f172a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.theme-btn:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+}
+
+body.light-mode .theme-btn {
+    background: #e2e8f0;
+    color: #111827;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* ==========================================================
+   >>>   LOGIN / REGISTER
+   ========================================================== */
+
+.login-container,
+.auth-container {
+    max-width: 380px;
+    margin: 60px auto;
+    padding: 24px 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+body.dark-mode .login-container,
+body.dark-mode .auth-container {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+.login-container h1,
+.auth-container h1 {
+    margin-bottom: 5px;
+    font-size: 28px;
+    color: #0077ff;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+/* Inputs */
+.login-container input,
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+body.dark-mode .login-container input,
+body.dark-mode .auth-container input {
+    background: #0f172a;
+    border-color: #475569;
+    color: white;
+}
+
+.auth-container input:focus,
+.login-container input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* Botón principal */
+.login-container button,
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.login-container button:hover,
+.auth-container button:hover {
+    background: #1e3a8a;
+}
+
+/* ==========================================================
+   >>>   DASHBOARD Y TARJETAS
+   ========================================================== */
+
+.container {
+    padding: 20px;
+}
+
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 20px;
+}
+
+.app-card {
+    background: white;
+    border-left: 6px solid #0077ff;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+body.dark-mode .app-card {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+
+.edit-btn { background: #0284c7; }
+.attach-btn { background: #6b7280; }
+.delete-btn { background: #dc2626; }
+.notes-btn { background: #4f46e5; }
+
+/* ==========================================================
+   >>>   FORMULARIOS GENERALES
+   ========================================================== */
+
+.form-container {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+body.dark-mode .form-container {
+    background: #1e293b;
+}
+
+.app-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.app-form input,
+.app-form select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #0f172a;
+    color: white;
+    border-color: #475569;
+}
+
+.add-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   >>>   NOTAS / HISTORIAL / ARCHIVOS
+   ========================================================== */
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+#notesList,
+#historyList,
+#attachmentList {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+body.dark-mode #notesList,
+body.dark-mode #historyList,
+body.dark-mode #attachmentList {
+    background: #1e293b;
+    color: white;
+}

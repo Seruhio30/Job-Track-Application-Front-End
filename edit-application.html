@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobTrack | Editar Aplicación</title>
+
+  <!-- Único CSS usado en toda la app -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="title">Editar Aplicación</h1>
+
+    <div class="header-actions">
+        <button id="backBtn" class="back-btn">Volver</button>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </div>
+</header>
+
+<main class="form-container">
+
+    <!-- FORMULARIO PRINCIPAL -->
+    <form id="editForm" class="app-form">
+
+      <!-- DATOS GENERALES -->
+      <h2 class="section-title">Datos Generales</h2>
+
+      <label>Empresa:
+        <input type="text" id="company" required />
+      </label>
+
+      <label>Puesto:
+        <input type="text" id="position" required />
+      </label>
+
+      <label>Ubicación:
+        <input type="text" id="location" />
+      </label>
+
+      <label>Fuente:
+        <input type="text" id="source" />
+      </label>
+
+      <label>Estado:
+        <select id="status" required>
+          <option value="Applied">Applied</option>
+          <option value="Interviewing">Interviewing</option>
+          <option value="Offer">Offer</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </label>
+
+      <!-- CONTACTO -->
+      <h2 class="section-title">Contacto</h2>
+
+      <label>Nombre del contacto:
+        <input type="text" id="contactName" />
+      </label>
+
+      <label>Correo del contacto:
+        <input type="email" id="contactEmail" />
+      </label>
+
+      <label>Teléfono del contacto:
+        <input type="text" id="contactPhone" />
+      </label>
+
+      <!-- INFO ADICIONAL -->
+      <h2 class="section-title">Información Adicional</h2>
+
+      <label>URL de la vacante:
+        <input type="url" id="jobUrl" />
+      </label>
+
+      <label>Salario:
+        <input type="text" id="salary" />
+      </label>
+
+      <label>Modalidad:
+        <select id="workMode">
+          <option value="">Seleccione...</option>
+          <option value="Remote">Remote</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="On-site">On-site</option>
+        </select>
+      </label>
+
+      <!-- RECORDATORIOS -->
+      <h2 class="section-title">Recordatorios</h2>
+
+      <label>
+        <input type="checkbox" id="reminderEnabled">
+        Activar recordatorios internos
+      </label>
+
+      <label>
+        <input type="checkbox" id="emailReminderEnabled">
+        Enviar recordatorios por email
+      </label>
+
+      <label>Días después de aplicar:
+        <input type="number" id="followUpDays" min="1" />
+      </label>
+
+      <label>Próxima fecha de seguimiento:
+        <input type="date" id="nextFollowUpDate">
+      </label>
+
+      <!-- ENTREVISTA -->
+      <h2 class="section-title">Entrevista</h2>
+
+      <label>Fecha de entrevista:
+        <input type="datetime-local" id="interviewDate">
+      </label>
+
+      <label>Link o ubicación:
+        <input type="text" id="interviewLocation">
+      </label>
+
+      <label>Recordar días antes:
+        <input type="number" id="interviewReminderDays" min="0" value="1">
+      </label>
+
+      <label>Recordar horas antes:
+        <input type="number" id="interviewReminderHours" min="0" value="2">
+      </label>
+
+      <button type="submit" class="add-btn">Guardar Cambios</button>
+
+    </form>
+
+    <!-- ARCHIVOS -->
+    <section style="margin-top: 3rem;">
+      <h2 class="section-title">Adjuntar Archivo</h2>
+
+      <input type="file" id="fileInput" />
+
+      <button id="uploadBtn" class="add-btn" style="margin-top: 1rem;">Subir Archivo</button>
+
+      <button id="historyBtn" class="secondary-btn" style="margin-top: 1rem;">Ver Historial</button>
+
+      <h2 class="section-title" style="margin-top: 2rem;">Archivos adjuntos</h2>
+      <div id="fileList" class="attachment-list">Cargando...</div>
+    </section>
+
+</main>
+
+<script src="js/edit-application.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+
+</html>
