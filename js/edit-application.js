@@ -1,4 +1,4 @@
-import { API_URL } from "./config.js";
+//import { API_URL } from "./config.js";
 
 const token = localStorage.getItem("token");
 if (!token) window.location.href = "index.html";

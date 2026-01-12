@@ -1,4 +1,4 @@
-import { API_URL } from "./config.js";
+///import { API_URL } from "./config.js";
 console.log("login cargado", API_URL);
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
