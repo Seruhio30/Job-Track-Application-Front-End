@@ -313,3 +313,10 @@ body.dark-mode #attachmentList {
     background: #1e293b;
     color: white;
 }
+
+/*=========================================================================*/
+/* Cambiar color del icono del calendario en inputs tipo date */
+body.dark-mode input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);     /* invierte el color: negro → blanco */
+  cursor: pointer;       /* opcional, mejora UX */
+}

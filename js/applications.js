@@ -32,10 +32,10 @@ async function cargarAplicaciones() {
                 const card = document.createElement("div");
                 card.classList.add("app-card");
                 card.innerHTML = `
-        <h3>${app.company}</h3>
-        <p><strong>Puesto:</strong> ${app.position}</p>
-        <p><strong>Estado:</strong> ${app.status}</p>
-      `;
+                    <h3>${app.company}</h3>
+                    <p><strong>Puesto:</strong> ${app.position}</p>
+                    <p><strong>Estado:</strong> ${app.status}</p>
+                `;
                 container.appendChild(card);
             });
     } catch (err) {
