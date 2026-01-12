@@ -1,5 +1,6 @@
-//import { API_URL } from "./config.js";
+import { API_URL } from "./config.js";
 
+console.log("API_URL =", typeof API_URL, API_URL);
 
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
   e.preventDefault();

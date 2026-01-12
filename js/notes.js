@@ -1,4 +1,4 @@
-//import { API_URL } from "./config.js";
+import { API_URL } from "./config.js";
 
 const token = localStorage.getItem("token");
 
@@ -10,7 +10,7 @@ const applicationId = params.get("id");
 
 // Botón volver
 document.getElementById("backBtn").addEventListener("click", () => {
-  window.location.href = `edit-application.html?id=${applicationId}`;
+  window.location.href = `dashboard.html?id=${applicationId}`;
 });
 
 

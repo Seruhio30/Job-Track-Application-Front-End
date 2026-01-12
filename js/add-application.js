@@ -1,4 +1,4 @@
-//import { API_URL } from "./config.js";
+import { API_URL } from "./config.js";
 
 console.log("add-application.js CARGADO");
 
@@ -71,4 +71,10 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("✔️ Aplicación guardada!");
         window.location.href = "dashboard.html";
     });
+});
+
+
+// Botón volver
+document.getElementById("backBtn").addEventListener("click", () => {
+  window.location.href = `dashboard.html`;
 });

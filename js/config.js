@@ -1,10 +1,10 @@
 // config.js
-const API_URL = "https://job-track-application-back-end.onrender.com";
+//const API_URL = "https://job-track-application-back-end.onrender.com";
 
 
 
 //para tener una sola llamada a la url de la api con modules mas adelante
-//export const API_URL = "https://job-track-application-back-end.onrender.com";
+export const API_URL = "https://job-track-application-back-end.onrender.com";
 
 
 //para cuando trabaje en local solo cambia a:

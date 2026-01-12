@@ -1,4 +1,4 @@
-//import { API_URL } from "./config.js";
+import { API_URL } from "./config.js";
 
 const token = localStorage.getItem("token");
 
@@ -54,3 +54,9 @@ document.getElementById("addAppBtn").addEventListener("click", () => {
 });
 
 cargarAplicaciones();
+
+
+// Botón volver
+document.getElementById("backBtn").addEventListener("click", () => {
+  window.location.href = `dashboard.html?id=${applicationId}`;
+});
