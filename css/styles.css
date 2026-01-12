@@ -274,6 +274,7 @@ body.dark-mode textarea {
     background: rgb(154, 149, 149);
     color: dark;
     border-color: #475569;
+    font-weight: bold;
 }
 
 .add-btn {
