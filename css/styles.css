@@ -271,8 +271,8 @@ textarea {
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
-    background: #0f172a;
-    color: white;
+    background: white;
+    color: dark;
     border-color: #475569;
 }
 
@@ -315,8 +315,4 @@ body.dark-mode #attachmentList {
 }
 
 /*=========================================================================*/
-/* Cambiar color del icono del calendario en inputs tipo date */
-body.dark-mode input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);     /* invierte el color: negro → blanco */
-  cursor: pointer;       /* opcional, mejora UX */
-}
+
