@@ -271,7 +271,7 @@ textarea {
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
-    background: white;
+    background: rgb(154, 149, 149);
     color: dark;
     border-color: #475569;
 }
