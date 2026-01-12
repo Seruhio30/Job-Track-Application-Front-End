@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:8080";
+import { API_URL } from "./config.js";
+
 console.log("add-application.js CARGADO");
 
 document.addEventListener("DOMContentLoaded", () => {

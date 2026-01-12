@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:8080";
+import { API_URL } from "./config.js";
+
 const token = localStorage.getItem("token");
 
 const params = new URLSearchParams(window.location.search);

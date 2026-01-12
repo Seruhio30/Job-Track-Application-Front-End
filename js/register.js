@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:8080";
+import { API_URL } from "./config.js";
+
 
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
   e.preventDefault();
