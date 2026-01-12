@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             emailReminderEnabled: document.getElementById("emailReminderEnabled").checked
         };
 
-        console.log("📤 Enviando a /api/applications:", appData);
+        //console.log("📤 Enviando a /api/applications:", appData);
 
         const response = await fetch(`${API_URL}/api/applications`, {
             method: "POST",
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const text = await response.text();
-        console.log("📥 Respuesta:", response.status, text);
+        //console.log("📥 Respuesta:", response.status, text);
 
         if (!response.ok) {
             alert("❌ Error API: " + text);
