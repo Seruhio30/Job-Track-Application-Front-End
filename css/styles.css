@@ -268,14 +268,16 @@ textarea {
     font-size: 1rem;
 }
 
+
 body.dark-mode input,
 body.dark-mode select,
 body.dark-mode textarea {
-    background: rgb(154, 149, 149);
-    color: dark;
-    border-color: #475569;
-    font-weight: bold;
+    background: #9a9595;       /* gris medio, se ve el calendario */
+    color: #111111;            /* texto negro sólido */
+    border-color: #6b7280;     /* gris más oscuro para contraste */
+    font-weight: bold;         /* letras gruesas */
 }
+
 
 .add-btn {
     width: 100%;
