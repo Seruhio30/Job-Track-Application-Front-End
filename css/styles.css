@@ -76,7 +76,7 @@ body.dark-mode {
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -114,16 +114,14 @@ body.light-mode .theme-btn {
     padding: 24px 20px;
     border-radius: 12px;
     background: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
 }
 
-body.dark-mode .login-container input,
-body.dark-mode .auth-container input {
-    background: #9a9595;   /* gris medio */
-    border-color: #475569;
-    color: #111111;        /* texto negro */
-    font-weight: bold;
+body.dark-mode .login-container,
+body.dark-mode .auth-container {
+    background: #1e293b;
+    color: #e5e7eb;
 }
 
 .login-container h1,
@@ -157,14 +155,11 @@ body.dark-mode .auth-container input {
     color: white;
 }
 
-body.dark-mode .auth-container input:focus,
-body.dark-mode .login-container input:focus {
-    background: #9a9595;   /* mismo gris */
-    color: #111111;
-    border-color: #334155;
+.auth-container input:focus,
+.login-container input:focus {
+    border-color: #2563eb;
     outline: none;
 }
-
 
 /* Botón principal */
 .login-container button,
@@ -205,13 +200,13 @@ body.dark-mode .login-container input:focus {
     border-left: 6px solid #0077ff;
     padding: 18px;
     border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     transition: transform 0.2s ease;
 }
 
 .app-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 body.dark-mode .app-card {
@@ -235,21 +230,10 @@ body.dark-mode .app-card {
     font-weight: 600;
 }
 
-.edit-btn {
-    background: #0284c7;
-}
-
-.attach-btn {
-    background: #6b7280;
-}
-
-.delete-btn {
-    background: #dc2626;
-}
-
-.notes-btn {
-    background: #4f46e5;
-}
+.edit-btn { background: #0284c7; }
+.attach-btn { background: #6b7280; }
+.delete-btn { background: #dc2626; }
+.notes-btn { background: #4f46e5; }
 
 /* ==========================================================
    >>>   FORMULARIOS GENERALES
@@ -261,7 +245,7 @@ body.dark-mode .app-card {
     padding: 25px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 body.dark-mode .form-container {
@@ -278,42 +262,28 @@ body.dark-mode .form-container {
 .app-form select,
 .app-form textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-size: 1rem;
+     padding: 10px; 
+     border: 1px solid #cbd5e1;
+      border-radius: 8px;
+       font-size: 1rem;
 }
 
-/* Estado normal */
 body.dark-mode .app-form input,
 body.dark-mode .app-form select,
 body.dark-mode .app-form textarea {
-    background: #9a9595;
-    /* gris medio */
-    color: #111111;
-    /* texto negro */
-    border: 1px solid #475569;
-    font-weight: bold;
+  background: #9a9595;   /* gris medio */
+  color: #111111;        /* texto negro */
+  border: 1px solid #475569;
+  font-weight: bold;
 }
 
-/* Estado en foco */
 body.dark-mode .app-form input:focus,
 body.dark-mode .app-form select:focus,
 body.dark-mode .app-form textarea:focus {
-    background: #9a9595;
-    /* mismo gris */
-    color: #111111;
-    border-color: #334155;
-    /* opcional: borde más oscuro al enfocar */
-    outline: none;
-    /* quita borde azul del navegador */
-}
-
-/* Estado válido (cuando el campo tiene contenido) */
-body.dark-mode .app-form input:valid,
-body.dark-mode .app-form textarea:valid {
-    background: #9a9595;
-    color: #111111;
+  background: #9a9595;
+  color: #111111;
+  border-color: #334155;
+  outline: none;
 }
 
 
@@ -345,7 +315,7 @@ textarea {
     padding: 15px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 body.dark-mode #notesList,
@@ -356,3 +326,4 @@ body.dark-mode #attachmentList {
 }
 
 /*=========================================================================*/
+
