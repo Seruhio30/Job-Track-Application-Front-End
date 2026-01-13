@@ -81,14 +81,16 @@ function renderApplications(apps) {
             }
         }
 
+
         card.innerHTML = `
             <h3>${app.company}</h3>
-      <p><strong>Puesto:</strong> ${app.position}</p>
-      <p><strong>Estado:</strong> ${app.status}</p>
-      <p><strong>Contacto:</strong> ${app.contactName || "N/A"}</p>
-      <p><strong>Email:</strong> ${app.contactEmail || "N/A"}</p>
-      <p><strong>Aplicado el:</strong> ${app.applicationDate ? app.applicationDate.split("T")[0] : "N/A"}</p>
-      <p><strong>Modalidad:</strong> ${app.workMode || "N/A"}</p>
+            <p><strong>Puesto:</strong> ${app.position}</p>
+            <p><strong>Estado:</strong> ${app.status}</p>
+            <p><strong>Contacto:</strong> ${app.contactName || "N/A"}</p>
+            <p><strong>Email:</strong> ${app.contactEmail || "N/A"}</p>
+            <p><strong>Aplicado el:</strong> ${app.appliedDate ? String(app.appliedDate).split("T")[0] : "N/A"}</p>
+
+            <p><strong>Modalidad:</strong> ${app.workMode || "N/A"}</p>
 
             <div class="card-actions">
                 <button class="edit-btn" data-id="${app.id}">Editar</button>
