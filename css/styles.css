@@ -268,23 +268,31 @@ textarea {
     font-size: 1rem;
 }
 
-/* Aplica SOLO dentro del formulario */
+/* Estado normal */
 body.dark-mode .app-form input,
 body.dark-mode .app-form select,
 body.dark-mode .app-form textarea {
   background: #9a9595;   /* gris medio */
   color: #111111;        /* texto negro */
-  border-color: #475569;
+  border: 1px solid #475569;
   font-weight: bold;
 }
 
-/* Estado de foco: evita que se pongan blancos */
+/* Estado en foco */
 body.dark-mode .app-form input:focus,
 body.dark-mode .app-form select:focus,
 body.dark-mode .app-form textarea:focus {
   background: #9a9595;   /* mismo gris */
   color: #111111;
-  outline: none;
+  border-color: #334155; /* opcional: borde más oscuro al enfocar */
+  outline: none;         /* quita borde azul del navegador */
+}
+
+/* Estado válido (cuando el campo tiene contenido) */
+body.dark-mode .app-form input:valid,
+body.dark-mode .app-form textarea:valid {
+  background: #9a9595;
+  color: #111111;
 }
 
 
