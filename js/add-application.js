@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             contactEmail: document.getElementById("contactEmail").value,
             contactPhone: document.getElementById("contactPhone").value,
 
-            appliedDate: appliedDate || null,
+            appliedDate: document.getElementById("appliedDate").value || null,
 
             jobUrl: document.getElementById("jobUrl").value,
             salary: document.getElementById("salary").value,
