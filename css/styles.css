@@ -268,14 +268,23 @@ textarea {
     font-size: 1rem;
 }
 
+/* Aplica SOLO dentro del formulario */
+body.dark-mode .app-form input,
+body.dark-mode .app-form select,
+body.dark-mode .app-form textarea {
+  background: #9a9595;   /* gris medio */
+  color: #111111;        /* texto negro */
+  border-color: #475569;
+  font-weight: bold;
+}
 
-body.dark-mode input,
-body.dark-mode select,
-body.dark-mode textarea {
-    background: #9a9595;       /* gris medio, se ve el calendario */
-    color: #111111;            /* texto negro sólido */
-    border-color: #6b7280;     /* gris más oscuro para contraste */
-    font-weight: bold;         /* letras gruesas */
+/* Estado de foco: evita que se pongan blancos */
+body.dark-mode .app-form input:focus,
+body.dark-mode .app-form select:focus,
+body.dark-mode .app-form textarea:focus {
+  background: #9a9595;   /* mismo gris */
+  color: #111111;
+  outline: none;
 }
 
 
