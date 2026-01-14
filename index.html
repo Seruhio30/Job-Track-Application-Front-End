@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,29 +11,40 @@
 </head>
 
 <body class="auth-page">
-  <!-- Botón de tema (dark / light) -->
-  <button id="themeToggle" class="theme-btn">🌙</button>
+  <main>
+    <!-- Botón de tema (dark / light) -->
+    <button id="themeToggle" class="theme-btn">🌙</button>
 
-  <!-- CONTENEDOR LOGIN -->
-  <div class="login-container">
-    <h1>JobTrack</h1>
-    <p class="subtitle">Organiza tus aplicaciones de trabajo</p>
+    <!-- CONTENEDOR LOGIN -->
+    <div class="login-container">
+      <h1>JobTrack</h1>
+      <p class="subtitle">Organiza tus aplicaciones de trabajo</p>
 
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="Correo electrónico" required />
-      <input type="password" id="password" placeholder="Contraseña" required />
-      <button type="submit">Iniciar sesión</button>
-    </form>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Correo electrónico" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <button type="submit">Iniciar sesión</button>
+      </form>
 
-    <p class="small-text">
-      ¿No tienes cuenta?
-      <a href="register.html" id="registerLink">Regístrate</a>
-    </p>
-  </div>
+      <p class="small-text">
+        ¿No tienes cuenta?
+        <a href="register.html" id="registerLink">Regístrate</a>
+      </p>
+    </div>
+  </main>
 
+  <footer>
+    <div class="footer-copy">
+      <p>© Track Job Application Todos los derechos reservados.</p>
+      <p class="dev-credit">Desarrollado por <a href=" https://seruhio30.github.io/Portfolio-SeruhioCode30-Front-End/"
+          target="_blank">SeruhioCode30</a></p>
+    </div>
+
+  </footer>
   <!-- JS -->
   <script src="js/config.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/theme.js"></script>
 </body>
+
 </html>

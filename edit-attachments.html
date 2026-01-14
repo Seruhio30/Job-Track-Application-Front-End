@@ -12,40 +12,49 @@
 
 <body>
 
-<header class="header">
+  <header class="header">
     <h1 class="title">Archivos Adjuntos</h1>
 
     <div class="header-actions">
-        <button id="backBtn" class="back-btn">Volver</button>
-        <button id="themeToggle" class="theme-btn">🌙</button>
+      <button id="backBtn" class="back-btn">Volver</button>
+      <button id="themeToggle" class="theme-btn">🌙</button>
     </div>
-</header>
+  </header>
 
-<main class="form-container">
+  <main class="form-container">
 
-  <h2 class="section-title">Subir nuevo archivo</h2>
+    <h2 class="section-title">Subir nuevo archivo</h2>
 
-  <form id="uploadForm" class="app-form">
+    <form id="uploadForm" class="app-form">
       <label>
         Seleccionar archivo:
         <input type="file" id="fileInput" required />
       </label>
 
       <button type="submit" class="add-btn">Subir Archivo</button>
-  </form>
+    </form>
 
-  <h2 class="section-title">Archivos existentes</h2>
+    <h2 class="section-title">Archivos existentes</h2>
 
-  <div id="attachmentList" class="attachment-list">
+    <div id="attachmentList" class="attachment-list">
       <p>Cargando...</p>
-  </div>
+    </div>
 
-</main>
-<script src="js/config.js"></script>
-<script type="module" src="js/edit-attachments.js"></script>
+  </main>
 
-<script src="js/theme.js"></script>
+  <footer>
+    <div class="footer-copy">
+      <p>© Track Job Application Todos los derechos reservados.</p>
+      <p class="dev-credit">Desarrollado por <a href=" https://seruhio30.github.io/Portfolio-SeruhioCode30-Front-End/"
+          target="_blank">SeruhioCode30</a></p>
+    </div>
+
+  </footer>
+  <script src="js/config.js"></script>
+  <script type="module" src="js/edit-attachments.js"></script>
+
+  <script src="js/theme.js"></script>
 
 </body>
-</html>
 
+</html>
