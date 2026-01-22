@@ -1,4 +1,26 @@
-//import { API_URL } from "./config.js";
+/**
+ * attachments.js
+ *
+ * Rol:
+ * - Gestiona los archivos adjuntos de una aplicación específica.
+ * - Permite listar, subir, descargar y eliminar archivos.
+ *
+ * Flujo general:
+ * 1) Obtiene el `applicationId` desde la URL.
+ * 2) GET  /api/attachments/application/{applicationId} → listar archivos.
+ * 3) POST /api/attachments/{applicationId}/upload → subir archivo.
+ * 4) GET  /api/attachments/download/{fileId} → descargar archivo.
+ * 5) DELETE /api/attachments/{fileId} → eliminar archivo.
+ *
+ * Suposiciones importantes:
+ * - API_URL está definido globalmente.
+ * - El token JWT existe en localStorage.
+ * - El backend valida permisos por token y aplicación.
+ *
+ * Nota para el futuro:
+ * - Si algo falla, revisar primero: token, id en la URL y endpoints de attachments.
+ */
+
 
 const token = localStorage.getItem("token");
 
@@ -95,7 +117,7 @@ async function deleteFile(fileId) {
     loadAttachments();
 }
 
-// 📌 EVENT DELEGATION PARA DESCARGAR Y ELIMINAR
+// EVENT DELEGATION PARA DESCARGAR Y ELIMINAR
 document.addEventListener("click", async (e) => {
     // Descargar archivo
     if (e.target.classList.contains("downloadFile")) {

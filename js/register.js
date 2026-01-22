@@ -1,4 +1,24 @@
-//import { API_URL } from "./config.js";
+/**
+ * register.js
+ *
+ * Rol:
+ * - Maneja el registro de nuevos usuarios.
+ * - Envía nombre, email y password al backend.
+ *
+ * Flujo general:
+ * 1) Usuario envía el formulario de registro.
+ * 2) POST /auth/register con los datos.
+ * 3) Backend valida y crea el usuario.
+ * 4) Redirección al login para iniciar sesión.
+ *
+ * Suposiciones importantes:
+ * - API_URL está definido globalmente.
+ * - El backend devuelve mensajes de error como texto plano.
+ *
+ * Nota para el futuro:
+ * - Si el registro falla, revisar endpoint /auth/register y validaciones del backend.
+ */
+
 
 console.log("API_URL =", typeof API_URL, API_URL);
 

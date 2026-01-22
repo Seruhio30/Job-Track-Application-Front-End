@@ -1,4 +1,25 @@
-//import { API_URL } from "./config.js";
+/**
+ * notes.js
+ *
+ * Rol:
+ * - Gestiona las notas asociadas a una aplicación.
+ * - Permite listar, crear y eliminar notas.
+ *
+ * Flujo general:
+ * 1) Verifica que exista token (sesión activa).
+ * 2) Obtiene el `applicationId` desde la URL.
+ * 3) GET  /api/notes/application/{applicationId} → listar notas.
+ * 4) POST /api/notes/application/{applicationId} → crear nota.
+ * 5) DELETE /api/notes/{noteId} → eliminar nota.
+ *
+ * Suposiciones importantes:
+ * - API_URL está definido globalmente.
+ * - El backend valida que las notas pertenezcan al usuario autenticado.
+ *
+ * Nota para el futuro:
+ * - Si las notas no cargan, revisar token, id en la URL y endpoints de notes.
+ */
+
 
 const token = localStorage.getItem("token");
 

@@ -1,5 +1,24 @@
-//import { API_URL } from "./config.js";
+/**
+ * application.js
+ *
+ * Rol de este archivo:
+ * - Proteger el acceso al dashboard (requiere token).
+ * - Cargar las aplicaciones del usuario autenticado.
+ * - Renderizar una vista simple (cards) con datos básicos.
+ *
+ * Suposiciones importantes:
+ * - El token JWT ya fue guardado en localStorage al hacer login.
+ * - API_URL apunta al backend correcto.
+ * - El backend valida el token y devuelve solo las apps del usuario.
+ *
+ * Nota para el futuro:
+ * - Si algo deja de cargar, revisar primero:
+ *   1) token en localStorage
+ *   2) endpoint del fetch
+ *   3) estructura del JSON devuelto por el backend
+ */
 
+// Guard de sesión: sin token no se puede usar el dashboard
 const token = localStorage.getItem("token");
 
 if (!token) {
@@ -7,11 +26,13 @@ if (!token) {
     window.location.href = "index.html";
 }
 
+// Headers comunes para endpoints protegidos por JWT
 const headers = { 
     "Authorization": `Bearer ${token}`,
     "Content-Type": "application/json"
 };
 
+// Carga y renderiza las aplicaciones del usuario
 async function cargarAplicaciones() {
     try {
         const res = await fetch(`${API_URL}/auth/login`,{ headers });
@@ -27,6 +48,7 @@ async function cargarAplicaciones() {
         }
 
         apps
+            // Ordenamos por fecha para mostrar las más recientes primero
             .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
             .forEach(app => {
                 const card = document.createElement("div");
@@ -44,6 +66,7 @@ async function cargarAplicaciones() {
     }
 }
 
+// Logout simple: borrar token y volver al login
 document.getElementById("logoutBtn").addEventListener("click", () => {
     localStorage.removeItem("token");
     window.location.href = "index.html";

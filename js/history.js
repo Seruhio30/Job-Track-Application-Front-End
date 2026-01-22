@@ -1,4 +1,25 @@
-//import { API_URL } from "./config.js";
+/**
+ * history.js
+ *
+ * Rol:
+ * - Muestra el historial de acciones de una aplicación específica.
+ * - Se usa como vista de solo lectura (no modifica datos).
+ *
+ * Flujo general:
+ * 1) Obtiene el `appId` desde los parámetros de la URL.
+ * 2) GET /api/history/{appId} → obtiene el historial desde el backend.
+ * 3) Renderiza los eventos en orden cronológico.
+ * 4) Permite volver a la pantalla de edición de la aplicación.
+ *
+ * Suposiciones importantes:
+ * - API_URL está definido globalmente.
+ * - El token JWT existe en localStorage.
+ * - El backend valida que el historial pertenezca al usuario autenticado.
+ *
+ * Nota para el futuro:
+ * - Si el historial no carga, revisar token, appId en la URL y endpoint /api/history.
+ */
+
 
 const token = localStorage.getItem("token");
 

@@ -1,4 +1,28 @@
-//import { API_URL } from "./config.js";
+/**
+ * edit-application.js
+ *
+ * Rol:
+ * - Pantalla para editar una aplicación existente.
+ * - Carga los datos desde el backend usando el id en la URL.
+ * - Permite actualizar la información (PUT).
+ * - Permite subir archivos asociados a la aplicación.
+ *
+ * Flujo general:
+ * 1) Verifica que exista token (sesión activa).
+ * 2) Obtiene el `id` de la aplicación desde los query params.
+ * 3) GET /api/applications/{id} → precarga el formulario.
+ * 4) PUT /api/applications/{id} → guarda cambios.
+ * 5) POST /api/attachments/{id}/upload → sube archivos.
+ *
+ * Suposiciones importantes:
+ * - API_URL está definido globalmente.
+ * - El backend valida el token y el id pertenece al usuario.
+ * - Las fechas vienen en formato compatible con inputs type="datetime-local".
+ *
+ * Nota para el futuro:
+ * - Si algo falla, revisar primero: token, id en la URL y endpoints.
+ */
+
 
 const token = localStorage.getItem("token");
 if (!token) window.location.href = "index.html";
