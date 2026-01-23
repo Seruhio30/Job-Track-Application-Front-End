@@ -1,3 +1,5 @@
+console.log("reset-password.js cargado", typeof API_URL, API_URL);
+
 const params = new URLSearchParams(window.location.search);
 const token = params.get("token");
 
