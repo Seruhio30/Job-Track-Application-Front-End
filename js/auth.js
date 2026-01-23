@@ -22,9 +22,14 @@
  * - El manejo de sesión del frontend se basa únicamente en localStorage.
  */
 
+console.log("auth.js cargado");
+
+
 // Log de carga para verificar que API_URL esté disponible
 console.log("login cargado", API_URL);
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  console.log("submit capturado");
+
   e.preventDefault();
 
   // Capturamos credenciales del formulario
