@@ -1,3 +1,5 @@
+console.log("✅ reset-password.js cargó");
+
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const token = params.get("token");
