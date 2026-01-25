@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let data;
       try { data = JSON.parse(text); } catch { data = null; }
 
-      msg.textContent = "✅ Si el correo existe, se envió un link de recuperación.";
+      msg.innerHTML = "✅ Si el correo existe, se envió un link de recuperación.";
+
+      //msg.textContent = "✅ Si el correo existe, se envió un link de recuperación.";
 
       if (data?.resetLink) {
         // modo beta: mostrar link clickeable
